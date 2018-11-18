@@ -24,7 +24,8 @@ public class AnimalApp {
         for (int i = 0; i <list.length ; i++) {
             System.out.println(list[i].myName() + " the " + list[i].getClass() + " says " + list[i].sayHello() +"\n Did I forget to tell you that I have " + list[i].legCount() + " legs.");
             if (list[i] instanceof IFamous){
-                System.out.println("This is a famous name of my animal type: " + list[i].famous);
+                IFamous famousAnimal = (IFamous) list[i];
+                System.out.println("This is a famous name of my animal type: " + famousAnimal.famous());
             }
 
         }
