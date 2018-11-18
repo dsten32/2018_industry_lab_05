@@ -3,7 +3,7 @@ package ictgradschool.industry.abstraction.pets;
 /**
  * Represents a dog.
  *
- * TODO Make this class implement the IAnimal interface, then implement all its methods.
+ * TODOne Make this class implement the IAnimal interface, then implement all its methods.
  */
 public class Dog implements IAnimal{
     @Override
@@ -18,7 +18,7 @@ public class Dog implements IAnimal{
 
     @Override
     public String myName() {
-        return "Bruno";
+        return "Bruno the dog";
     }
 
     @Override

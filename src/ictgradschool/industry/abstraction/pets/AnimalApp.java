@@ -22,7 +22,14 @@ public class AnimalApp {
         // TODO Loop through all the pets in the given list, and print their details as shown in the lab handout.
         // TODO If the animal also implements IFamous, print out that corresponding info too.
         for (int i = 0; i <list.length ; i++) {
-            System.out.println(list[i].myName() + " the " + list[i].getClass() + " says " + list[i].sayHello() +"\n Did I forget to tell you that I have " + list[i].legCount() + " legs.");
+            System.out.println(list[i].myName() + " says " + list[i].sayHello() );
+            System.out.print(list[i].myName() + " is a " );
+            if (list[i].isMammal()){
+                System.out.println("mammal");
+            } else {
+                System.out.println("non-mammal");
+            }
+            System.out.println("Did I forget to tell you that I have " + list[i].legCount() + " legs.");
             if (list[i] instanceof IFamous){
                 IFamous famousAnimal = (IFamous) list[i];
                 System.out.println("This is a famous name of my animal type: " + famousAnimal.famous());

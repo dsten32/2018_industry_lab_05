@@ -3,7 +3,7 @@ package ictgradschool.industry.abstraction.pets;
 /**
  * Represents a Bird.
  *
- * TODO Correctly implement these methods, as instructed in the lab handout.
+ * TODOne Correctly implement these methods, as instructed in the lab handout.
  */
 public class Bird implements IAnimal {
 
@@ -19,10 +19,14 @@ public class Bird implements IAnimal {
         return false;
     }
 
+//    public String getIsMammal(){
+//        return "non-mammal";
+//    }
+
     @Override
     public String myName() {
 
-        return "Tweety";
+        return "Tweety the bird";
     }
 
     @Override
