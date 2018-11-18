@@ -28,6 +28,6 @@ public class Horse implements IAnimal,IFamous{
 
     @Override
     public String famous() {
-        return "This is a famous animal of my type: Pharlap";
+        return "Pharlap";
     }
 }
