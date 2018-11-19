@@ -172,6 +172,13 @@ public class Farm {
     public void printStock() {
         // TODO Go through the pets array, and print information for each animal on the farm.
         // TODO If there are no pets on the farm, simply print "No pets on the farm!"
+        for (int i = 0; i <animals.length ; i++) {
+            if (!(animals[i]==null)){
+                System.out.println(animals[i]);
+            } else {
+                System.out.println("No animals on the farm!");
+            }
+        }
 
     }
 
