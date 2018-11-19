@@ -21,12 +21,12 @@ public class Farm {
      * @param money The amount of money for starting the farm
      */
     public Farm(int money) {
-        // TODO Complete the constructor so that money and STARTING_MONEY are
-        // TODO initialised to the money from the constructor, and the pets array is
-        // TODO big enough to hold 10 Animal objects.
-        this.money = 0;
-        this.STARTING_MONEY = 0;
-        this.animals = null;
+        // TODOne Complete the constructor so that money and STARTING_MONEY are
+        // TODOne initialised to the money from the constructor, and the pets array is
+        // TODOne big enough to hold 10 Animal objects.
+        this.money = money;
+        this.STARTING_MONEY = money;
+        this.animals = new Animal[10];
     }
 
     /**
@@ -72,11 +72,17 @@ public class Farm {
             return false;
         }
 
-        // TODO Go through the pets array, and add the new animal
-        // TODO to the pets array if the pets array is not already full.
-        // TODO Also, deduct the animal price from money once the new animal has been
-        // TODO added to the pets array.
-
+        // TODOne Go through the animals array, and add the new animal
+        // TODOne to the animals array if the animals array is not already full.
+        // TODOne Also, deduct the animal price from money once the new animal has been
+        // TODOne added to the animals array.
+        for (int i = 0; i < animals.length; i++) {
+            if (animals[i]==null){
+                animals[i]=newAnimal;
+                money-=price;
+                return true;
+            }
+        }
 
         return false;
     }
