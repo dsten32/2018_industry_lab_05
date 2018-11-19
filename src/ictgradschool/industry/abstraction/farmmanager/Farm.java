@@ -150,10 +150,10 @@ public class Farm {
      * Feeds all pets of the type specified on the farm.
      */
     public void feed(String animalType) {
-        // TODO Go through the pets array, and feed each animal of the type specified
-        // TODO if you have enough money to feed it. When you fed an animal, don't forget to subtract
-        // TODO the cost to feed from the money you have on the farm, and call the feed method on the
-        // TODO animal.
+        // TODOne Go through the pets array, and feed each animal of the type specified
+        // TODOne if you have enough money to feed it. When you fed an animal, don't forget to subtract
+        // TODOne the cost to feed from the money you have on the farm, and call the feed method on the
+        // TODOne animal.
         animalType=animalType.toLowerCase();
         for (int i = 0; i <animals.length ; i++) {
             if (animals[i].getType().equals(animalType)){
@@ -170,11 +170,12 @@ public class Farm {
      * Prints information for all pets on the farm.
      */
     public void printStock() {
-        // TODO Go through the pets array, and print information for each animal on the farm.
-        // TODO If there are no pets on the farm, simply print "No pets on the farm!"
+        // TODOne Go through the pets array, and print information for each animal on the farm.
+        // TODOne If there are no pets on the farm, simply print "No pets on the farm!"
 
-        if(animals==null){
+        if (animals[0]==null){
             System.out.println("No animals on the farm");
+            return;
         }
 
         for (int i = 0; i <animals.length ; i++) {
@@ -182,10 +183,7 @@ public class Farm {
             if (animals[i]!=null){
                 System.out.println(animals[i]);
             }
-
         }
-
-
     }
 
     /**
