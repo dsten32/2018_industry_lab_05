@@ -4,6 +4,7 @@ public class SuperClass {
     public int x = 10;
     static int y = 10;
     SuperClass() {
+
         x = y++;
     }
     public int foo() {
@@ -12,5 +13,4 @@ public class SuperClass {
     public static int goo() {
         return y;
     }
-
 }

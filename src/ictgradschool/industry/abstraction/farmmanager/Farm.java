@@ -96,9 +96,9 @@ public class Farm {
         switch (animalType.toLowerCase()) {
             case "cow":
                 return new Cow();
-            case "Chicken":
+            case "chicken":
                 return new Chicken();
-            case "Unicorn":
+            case "unicorn":
                 return new Unicorn();
             default:
                 // Animal type does not exist;
@@ -193,9 +193,9 @@ public class Farm {
      * Harvests products from all pets that can produce products such as milk.
      */
     public void harvestAll() {
-        // TODO Go through the pets array, and harvest the product from each animal on the farm
-        // TODO if the animal is an instance of IProductionAnimal and it is harvestable. When you have harvested an
-        // TODO animal, don't forget to increase the money you have on the farm with the money you made.
+        // TODOne Go through the pets array, and harvest the product from each animal on the farm
+        // TODneO if the animal is an instance of IProductionAnimal and it is harvestable. When you have harvested an
+        // TODOne animal, don't forget to increase the money you have on the farm with the money you made.
         for (int i = 0; i < animals.length; i++) {
             if(animals[i] instanceof IProductionAnimal){
                 IProductionAnimal prod = (IProductionAnimal)animals[i];
