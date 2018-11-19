@@ -154,6 +154,15 @@ public class Farm {
         // TODO if you have enough money to feed it. When you fed an animal, don't forget to subtract
         // TODO the cost to feed from the money you have on the farm, and call the feed method on the
         // TODO animal.
+        animalType=animalType.toLowerCase();
+        for (int i = 0; i <animals.length ; i++) {
+            if (animals[i].getType().equals(animalType)){
+                if (money>animals[i].costToFeed()){
+                    animals[i].feed();
+                    money-=animals[i].costToFeed();
+                }
+            }
+        }
 
     }
 
