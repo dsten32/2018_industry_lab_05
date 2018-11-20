@@ -15,4 +15,13 @@ public class Produce extends Item implements Perishable {
     public double weight() {
         return 0;
     }
+
+    public String getName(){
+        return this.name;
+    }
+
+    public double getPrice(){
+        return this.price;
+    }
+
 }
