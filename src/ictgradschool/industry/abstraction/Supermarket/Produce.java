@@ -1,16 +1,18 @@
 package ictgradschool.industry.abstraction.Supermarket;
 
-//public class Produce extends Item implements Perishable {
+import java.util.Date;
+
+public class Produce extends Item implements Perishable {
 
 
 
-//    @Override
-//    public String expDate() {
-//        return null;
-//    }
+    @Override
+    public Date expDate() {
+        return null;
+    }
 
-//    @Override
-//    public double weight() {
-//        return 0;
-//    }
-//}
+    @Override
+    public double weight() {
+        return 0;
+    }
+}
