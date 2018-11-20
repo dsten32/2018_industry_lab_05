@@ -1,7 +1,9 @@
 package ictgradschool.industry.abstraction.Supermarket;
 
+import java.util.Date;
+
 public interface Perishable {
-    public String expDate();
+    public Date expDate();
     public double weight();
 
 }

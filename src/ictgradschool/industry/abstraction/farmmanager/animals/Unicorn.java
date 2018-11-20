@@ -11,7 +11,7 @@ public class Unicorn extends Animal {
     private final int MAX_VALUE = 20000;
 
     public Unicorn() {
-        value = 10000;
+        value = 8500;
     }
 
     public void feed() {

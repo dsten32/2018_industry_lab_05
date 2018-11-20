@@ -19,9 +19,7 @@ public class Bird implements IAnimal {
         return false;
     }
 
-//    public String getIsMammal(){
-//        return "non-mammal";
-//    }
+
 
     @Override
     public String myName() {
