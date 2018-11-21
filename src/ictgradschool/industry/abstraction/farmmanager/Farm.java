@@ -157,9 +157,8 @@ public class Farm {
         // TODOne if you have enough money to feed it. When you fed an animal, don't forget to subtract
         // TODOne the cost to feed from the money you have on the farm, and call the feed method on the
         // TODOne animal.
-        animalType=animalType.toLowerCase();
         for (int i = 0; i <animals.length ; i++) {
-            if (animals[i].getType().equals(animalType)){
+            if (animals[i] != null && animals[i].getType().equalsIgnoreCase(animalType)){
                 if (money>animals[i].costToFeed()){
                     animals[i].feed();
                     money-=animals[i].costToFeed();

@@ -1,6 +1,8 @@
 package ictgradschool.industry.abstraction.polys;
 
 public class Test1 extends SuperClass {
+    static int x = 15;
+    static int y = 15;
     int x2= 20;
     static int y2 = 20;
     Test1() {
@@ -13,24 +15,17 @@ public class Test1 extends SuperClass {
         return y2;
     }
     public static void main(String[] args) {
-        SuperClass s1 = new SuperClass();
-        Test1 t1 = new Test1();
-        System.out.println("The Base object");
-        System.out.println("S1.x = " + s1.x);
-        System.out.println("S1.y = " + s1.y);
-        System.out.println("S1.foo() = " + s1.foo());
-        System.out.println("S1.goo() = " + s1.goo());
-        System.out.println("\nThe Derived object");
-        System.out.println("\nInherited fields");
-        System.out.println("T1.x = " + t1.x);
-        System.out.println("T1.y = " + t1.y);
-        System.out.println("T1.foo() = " + t1.foo());
-        System.out.println("T1.goo() = " + t1.goo());
-        System.out.println("\nThe instance/class fields");
-        System.out.println("T1.x2 = " + t1.x2);
-        System.out.println("T1.y2 = " + t1.y2);
-        System.out.println("T1.foo2() = " + t1.foo2());
-        System.out.println("T1.goo2() = " + t1.goo2());
+        SuperClass s2 = new Test1();
+
+
+
+        System.out.println("\nThe static Binding");
+        System.out.println("S2.x = " + s2.x);
+        System.out.println("S2.y = " + s2.y);
+        System.out.println("S2.foo() = " + s2.foo());
+        System.out.println("S2.goo() = " + s2.goo());
     }
+
 }
+
 
