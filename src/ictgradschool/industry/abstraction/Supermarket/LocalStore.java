@@ -1,7 +1,9 @@
 package ictgradschool.industry.abstraction.Supermarket;
 
 import ictgradschool.Keyboard;
+import javafx.util.Pair;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -15,12 +17,20 @@ public class LocalStore {
 
     public void start(){
 
-        System.out.println("what sm name: ");
+        System.out.print("what sm name: ");
         setName(Keyboard.readInput());
         System.out.println("you set the sm name to be" + name);
-        System.out.println("what sm loc: ");
+        System.out.print("what sm loc: ");
         setLocation(Keyboard.readInput());
         System.out.println("you set the sm loc to be" + location);
+        System.out.print("what sm maxprod: ");
+        setMaxProducts(Integer.parseInt(Keyboard.readInput()));
+        System.out.println("you set the sm maxprod to be" + location);
+
+        System.out.println("add a prod");
+        inventory=addInventory();
+        System.out.print("you added:");
+        System.out.print(inventory);
 
     }
 
@@ -40,6 +50,28 @@ public class LocalStore {
 
     public void setMaxProducts(int maxProducts) {
         this.maxProducts = maxProducts;
+    }
+
+    public List addInventory(){
+        List newProd = new ArrayList();
+//new product name..
+        System.out.print("new prod name: ");
+        String eName=Keyboard.readInput();
+        Pair<String,String> pName=new Pair<>("Name:",eName);
+        newProd.add(pName);
+//new product price..
+        System.out.print("new prod price: ");
+        double ePrice=Double.parseDouble(Keyboard.readInput());
+        Pair<String,Double> pPrice=new Pair<>("Price:",ePrice);
+        newProd.add(pPrice);
+//new product quantity..
+        System.out.print("new prod quantity: ");
+        int eQuant=Integer.parseInt(Keyboard.readInput());
+        Pair<String,Integer> pQuant=new Pair<>("Quant:",eQuant);
+        newProd.add(pQuant);
+
+
+        return newProd;
     }
 
     public void setInventory(List inventory) {
